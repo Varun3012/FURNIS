@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Furniture</title>
+    <link rel="stylesheet" type="text/css" href="furniture.css">
+
+    <link rel="stylesheet" type="text/css"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="#"><img src="furni.jpg" width="180"></a>
+            </div>
+            <div class="nav_side">
+                <a href="about.html">About us</a>
+                <a href="service.html">Services</a>
+                <a href="blog.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="logout.php">Logout</a> 
+                <a href="e-furniture.php">Main Site</a>
+            </div>
+            </nav>
+
+           
+
+            <div class="register_us">
+                <h2>Purchase the Product</h2>
+                <div class="about_content">
+                    <p>Fill the  details here so that we may connect with you.THANKS!</p>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="feed">
+                <h2>write a review</h2>
+                <div class="feed_form">
+                  <form name="submit-googlesheet" method="post">
+                      <input type="text" name="Name" placeholder="Name"><br>
+                      <input type="email" name="Email" placeholder="Email ID"><br>
+                      <input type="number" name="Number" placeholder="Contact Number"><br>
+                      <textarea rows="5" cols="7" name="address" placeholder="Write your address"></textarea><br>
+                      <textarea rows="5" cols="7" name="Review" placeholder="Name of the item which you want"></textarea><br>
+                      <button type="submit">Submit</button>
+
+                  </form>
+                </div>
+                </div>
+
+              
+
+          <footer>
+              <div class="footer_logo">
+                  <a href="#"><img src="furni.jpg" width="200"></a>
+              </div>
+              <div class="pages">
+                  <h3>Pages</h3>
+                  <a href="about.html">About us</a>
+                  <a href="">Services</a>
+                  <a href="">Blogs</a>
+                  <a href="">Login</a>
+                  <a href="">Sign Up</a>
+                  
+              </div>
+              <div class="doc">
+                  <h3>Documents</h3>
+                  <a href="">Privacy Policy</a>
+                  <a href="">Terms of Use</a>
+                  <a href="">Refund Poilcy</a>
+              </div>
+              <div class="social">
+                  <h3>Follow Us</h3>
+                  <a href="https://www.facebook.com/abhishek.varun.735/" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="contact">
+                  <h3>Contact Us</h3>
+                  <a href="https://alvo.chat/1wO" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                  <a href="tel: +91-9876543210"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                  <a href="mailto: varunabhishek2000@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+              </div>
+              <hr>
+              <p>Copyright &copy; 2021 E-Furniture.All rights reserved</p>
+          </footer>
+         
+
+           <script type="text/javascript">
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbxQYwuKnmWFdub5rdh0LkJyUF6ePrpX3BT_AhYX1DDi4DPioEonu8b_UqnJPVDx6ps/exec'
+const form = document.forms['submit-googlesheet']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thanks for contacting us...! We Will Contact you soon..."))
+    .catch(error => console.error('Error!', error.message))
+})
+           </script>
+          </body>
+          </html>
